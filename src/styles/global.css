@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    @apply sm:container font-mono
+}
