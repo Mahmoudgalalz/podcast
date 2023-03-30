@@ -19,13 +19,13 @@ const pathname = window.location.pathname;
 export function BaseLayout({children}:any){
     return (
         <>
-        <header className="top-0 z-30 w-full fixed sm:static">
+        <div className="flex flex-col min-h-screen">
+<header className="top-0 z-30 w-full fixed sm:static max-sm:bg-main">
   <div className="mx-auto">
     <div className="flex flex-col items-center justify-between gap-2 pt-6 sm:flex-row">
       <a href="/" className="text-2xl font-medium duration-150 hover:text-zinc-600/70">
         Junior Talks
       </a>
-      {/* Desktop navigation */}
       <nav className="flex items-center grow ">
         <ul className="flex flex-wrap items-center justify-end sm:gap-4 grow">
           {navList.map(({title,link}) => (
@@ -48,13 +48,12 @@ export function BaseLayout({children}:any){
 </header>
             {children}
 
-            <footer className="my-auto bg-white rounded-lg shadow m-4">
-              <div className="p-4 flex justify-center">
-      <span className="text-sm text-gray-500 text-center">© 2023 <a href="." className="hover:underline">Junior Talks™</a>. All Rights Reserved.
-    </span>
+<footer className="my-auto bg-white rounded-lg shadow m-4">
+    <div className="p-4 flex justify-center">
+      <span className="text-sm text-gray-500 text-center">© 2023 <a href="." className="hover:underline">Junior Talks™</a>. All Rights Reserved.</span>
     </div>
 </footer>
-
+</div>
     </>
     )
 }
