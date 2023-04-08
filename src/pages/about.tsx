@@ -39,4 +39,4 @@ export default function about(){
     )
 }
 
-export const Head: HeadFC = () => <title>Junior Talks</title>
+export const Head: HeadFC = () => <title>Junior Talks About</title>

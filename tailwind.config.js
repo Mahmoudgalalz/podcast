@@ -7,9 +7,15 @@ module.exports = {
   theme: {
     container:{
 			center:true,
-			padding:'20rem',
+			padding:'10rem',
     },
-    extend: {},
+    colors:{
+      main:'#eeeee4',
+      sub:'#eab676',
+      accent:'#76b5c5',
+      text:'#154c79',
+    },
+     extend: {},
   },
   plugins: [],
 }
