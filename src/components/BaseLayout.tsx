@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
+import Podcast from "./Podcast";
 const navList=[
     {
         title: "Home",
@@ -44,11 +45,6 @@ export function BaseLayout({children}:any){
 </header>
             {children}
 
-<footer className="my-auto bg-white rounded-lg shadow m-4">
-    <div className="p-4 flex justify-center">
-      <span className="text-sm text-gray-500 text-center">© 2023 <a href="." className="hover:underline">Junior Talks™</a>. All Rights Reserved.</span>
-    </div>
-</footer>
 </div>
     </>
     )
