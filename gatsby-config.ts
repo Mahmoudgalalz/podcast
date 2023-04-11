@@ -27,10 +27,10 @@ const config: GatsbyConfig = {
     __key: "pages"
   },
   {
-    resolve: 'gatsby-source-buzzsprout',
+    resolve: 'gatsby-source-rss-feed',
     options: {
-      token: process.env.PODAPI,
-      podcastId: '1699135',
+      url:'https://anchor.fm/s/916ca660/podcast/rss',
+      name:'podcast'
     }
   },
 ]
