@@ -7,10 +7,6 @@ const navList=[
         link:'/'
     },
     {
-        title: "Episodes",
-        link:'/episodes'
-    },
-    {
         title: "About",
         link:'/about'
     },

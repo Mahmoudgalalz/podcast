@@ -1,8 +1,9 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import { HeadFC, PageProps, graphql } from "gatsby"
 import { BaseLayout } from "../components/BaseLayout"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { Icon } from "@iconify/react"
+import Podcasts from "../components/podcasts"
 
 const rss=[
   {
@@ -27,12 +28,12 @@ const rss=[
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <BaseLayout>
-    <div className="grid sm:grid-flow-col sm:my-20 my-44 gap-6 ">
-      <StaticImage className="mx-auto rounded-md h-56 w-56 items-center" src="../images/cover.png" alt="Cover"/>
+    <div className="grid sm:grid-flow-col sm:my-20 my-44 gap-6">
+      <StaticImage className="mx-auto rounded-md h-56 w-56 items-center shadow-md" src="../images/cover.png" alt="Cover"/>
       <div className="text-black mx-10 my-8">
         <h1 className="text-3xl font-bold">Junior Talks</h1>
         <h2 className="text-2xl font-bold">Mahmoud Galal aka <span className="text-red-500">KroKing</span></h2>
-        <p className="">
+        <p className="my-6">
         I'm a Junior Software engineer, interested in community-enriching and empowering Juniors.
 
 In this Podcast, I will share my story and other Juniors' Stories, How they become a Software engineer.
@@ -44,15 +45,16 @@ I'm also an open-source enthusiast so I will talk a lot about how contributions 
       
     </div>
     <ul className="flex gap-4 flex-wrap -mt-10 mx-4 max-sm:-mt-32">
-    <li><StaticImage className="w-20 hover:scale-105 duration-150" src="../images/anghami.png" alt="logo"></StaticImage></li>
+    <li><a href="" target="_blank"><StaticImage className="w-20 hover:scale-105 duration-150" src="../images/anghami.png" alt="logo"></StaticImage></a></li>
       {rss.map(({logo,link})=>{
         return <li className="hover:scale-105 duration-150"><a href={link} target="_blank">{logo}</a></li>
       })}
-      
     </ul>
+    <Podcasts/>
     </BaseLayout>
   )
 }
+
 
 export default IndexPage
 
