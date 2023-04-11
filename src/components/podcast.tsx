@@ -1,18 +1,30 @@
 import * as React from "react"
-import { HeadFC, PageProps, graphql, useStaticQuery } from "gatsby"
+import Player from 'react-material-music-player'
+import { Track, PlayerInterface } from 'react-material-music-player'
+import { usePodcastdata } from "../hooks/podcastData"
 
 
-
-export default function Podcast({data}){
-        const {title,content,link,image,url}=data
+function formTracks(podcast:any):Track[]{
+    const Tracks:Track[]=[];
+    podcast.map(pod=>{
+        const track=new Track(
+            pod.node.id,
+            pod.node.itunes.image,
+            pod.node.title,
+            "Mahmoud Galal",
+            pod.node.enclosure.url
+        )
+        Tracks.push(track)
+    })
+    
+    return Tracks;
+}
+export default function Podcast(){
+        const data = usePodcastdata();
+        const tracks = formTracks(data);
+        
+        PlayerInterface.play(tracks)
         return (
-            <div className="flex border-2 border-sub">
-                <img className="w-20" src="../images/avatar.png" alt="logo"/>
-                <div>
-                    <h1>{title}</h1>
-                    <p>Dis</p>
-                    <div></div>
-                </div>
-            </div>
+            <Player  sx={{width:"100vw", position:"fixed", right:'0'}} ></Player>
         )
     }
