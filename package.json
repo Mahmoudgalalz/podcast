@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
+    "@types/jest": "^29.5.0",
     "gatsby": "^5.8.0",
     "gatsby-plugin-google-gtag": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
@@ -30,12 +31,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-material-music-player": "^1.1.9"
-
   },
   "devDependencies": {
     "@iconify/react": "^4.1.0",
-    "@types/node": "^18.15.3",
-    "@types/react": "^18.0.28",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.34",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
     "gatsby-plugin-postcss": "^6.8.0",
