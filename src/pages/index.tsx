@@ -3,7 +3,7 @@ import { HeadFC, PageProps, graphql } from "gatsby"
 import { BaseLayout } from "../components/BaseLayout"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { Icon } from "@iconify/react"
-import Podcasts from "../components/podcasts"
+import Podcast from "../components/Podcast"
 
 const rss=[
   {
@@ -50,7 +50,7 @@ I'm also an open-source enthusiast so I will talk a lot about how contributions 
         return <li className="hover:scale-105 duration-150"><a href={link} target="_blank">{logo}</a></li>
       })}
     </ul>
-    <Podcasts/>
+    <Podcast/>
     </BaseLayout>
   )
 }
