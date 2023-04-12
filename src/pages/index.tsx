@@ -4,6 +4,7 @@ import { BaseLayout } from "../components/BaseLayout"
 import { Icon } from "@iconify/react"
 import Podcast from "../components/Podcast"
 
+
 const rss=[
   {
     logo:<Icon icon="cib:apple-podcasts" fontSize='2.5rem'/>,
@@ -41,7 +42,6 @@ Talking about best practices to learn and create software.
 I'm also an open-source enthusiast so I will talk a lot about how contributions to open-source helped me to become a good SW
         </p>
       </div>
-      
     </div>
     <ul className="flex gap-4 flex-wrap -mt-10 mx-4 max-sm:-mt-32">
     <li><a href="https://play.anghami.com/artist/17560836" target="_blank"><StaticImage className="w-20 hover:scale-105 duration-150" src="../images/anghami.png" alt="logo"></StaticImage></a></li>
