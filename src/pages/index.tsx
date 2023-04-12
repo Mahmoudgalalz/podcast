@@ -1,7 +1,6 @@
 import * as React from "react"
-import { HeadFC, PageProps, graphql } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import { BaseLayout } from "../components/BaseLayout"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import { Icon } from "@iconify/react"
 import Podcast from "../components/Podcast"
 
@@ -45,7 +44,7 @@ I'm also an open-source enthusiast so I will talk a lot about how contributions 
       
     </div>
     <ul className="flex gap-4 flex-wrap -mt-10 mx-4 max-sm:-mt-32">
-    <li><a href="" target="_blank"><StaticImage className="w-20 hover:scale-105 duration-150" src="../images/anghami.png" alt="logo"></StaticImage></a></li>
+    <li><a href="https://play.anghami.com/artist/17560836" target="_blank"><StaticImage className="w-20 hover:scale-105 duration-150" src="../images/anghami.png" alt="logo"></StaticImage></a></li>
       {rss.map(({logo,link})=>{
         return <li className="hover:scale-105 duration-150"><a href={link} target="_blank">{logo}</a></li>
       })}
