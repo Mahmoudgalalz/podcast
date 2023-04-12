@@ -1,7 +1,5 @@
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
-import Podcast from "./Podcast";
 const navList=[
     {
         title: "Home",
